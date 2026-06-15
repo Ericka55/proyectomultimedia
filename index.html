@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades Individuales - Panel de Control</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>Panel de Actividades Individuales</h1>
+    <p>Estudiante: Ericka Fabiola Barrionuevo Chavez | UMSA - Multimedia</p>
+</header>
+
+<nav class="contenedor-botones">
+    <button class="btn-nav" onclick="mostrarSeccion('ejercicio1')">1. Demo Clasificación de Texturas</button>
+    <button class="btn-nav" onclick="mostrarSeccion('ejercicio2')">2. Demo Filtro de Suavizado</button>
+    <button class="btn-nav" onclick="mostrarSeccion('ejercicio3')">3. Cover La Vaca Lola (Unity)</button>
+</nav>
+
+<main class="contenido-principal">
+
+    <!-- EJERCICIO 1 -->
+    <section id="ejercicio1" class="seccion-actividad activa">
+        <h2>Actividad 1: Clasificación de Texturas (Demo en Vivo)</h2>
+        <p>Sube una imagen para probar el algoritmo de clasificación de texturas.</p>
+
+        <div class="zona-demo">
+            <input type="file" id="cargarTextura" accept="image/*">
+            <button class="btn-accion" onclick="procesarClasificacion()">Clasificar Texturas</button>
+        </div>
+
+        <div class="galeria-imagenes">
+            <div class="tarjeta-img">
+                <h3>Imagen Original</h3>
+                <canvas id="canvasOriginal1"></canvas>
+            </div>
+            <div class="tarjeta-img">
+                <h3>Resultado</h3>
+                <canvas id="canvasResultado1"></canvas>
+            </div>
+        </div>
+
+        <div class="descargas">
+            <h3>Descargas</h3>
+
+            <a href="https://github.com/TU_USUARIO/TU_REPOSITORIO" target="_blank" class="btn-github">
+                🌐 Ver Código en GitHub
+            </a>
+
+            <a href="https://github.com/TU_USUARIO/TU_REPOSITORIO/archive/refs/heads/main.zip" class="btn-zip">
+                📦 Descargar Proyecto Completo (.ZIP)
+            </a>
+
+            <a href="clasificadorTexturas.zip" class="btn-zip" download>
+                📁 Descargar Clasificador Texturas (.ZIP)
+            </a>
+        </div>
+    </section>
+
+    <!-- EJERCICIO 2 -->
+    <section id="ejercicio2" class="seccion-actividad">
+        <h2>Actividad 2: Filtro de Suavizado 3×3</h2>
+        <p>Aplica un filtro de promedio para suavizar la imagen.</p>
+
+        <div class="zona-demo">
+            <input type="file" id="cargarSuavizado" accept="image/*">
+            <button class="btn-accion" onclick="procesarSuavizado()">Aplicar Filtro</button>
+        </div>
+
+        <div class="galeria-imagenes">
+            <div class="tarjeta-img">
+                <h3>Antes</h3>
+                <canvas id="canvasOriginal2"></canvas>
+            </div>
+            <div class="tarjeta-img">
+                <h3>Después</h3>
+                <canvas id="canvasResultado2"></canvas>
+            </div>
+        </div>
+
+        <div class="descargas">
+            <h3>Descargas</h3>
+
+            <a href="https://github.com/Ericka55/proyectomultimedia" target="_blank" class="btn-github">
+                🌐 Ver Código en GitHub
+            </a>
+
+            <a href="FiltroSuavizado.zip" class="btn-zip" download>
+                📁 Descargar Filtro Suavizado (.ZIP)
+            </a>
+        </div>
+    </section>
+
+    <!-- EJERCICIO 3 -->
+    <section id="ejercicio3" class="seccion-actividad">
+        <h2>Actividad 3: Cover "La Vaca Lola"</h2>
+        <p>Proyecto Unity exportado a WebGL.</p>
+
+        <div class="contenedor-unity">
+            <iframe src="juegoUnity/index.html"
+                    title="Proyecto Unity WebGL"
+                    width="100%"
+                    height="600"
+                    style="border:none;">
+            </iframe>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
