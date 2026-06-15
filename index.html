@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Actividades Multimedia - UMSA</title>
+<title>Ericka Fabiola Barrionuevo Chavez - Multimedia UMSA</title>
 
 <style>
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#0f172a;
+    background:#0b1220;
     color:white;
 }
 
 header{
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
     background:#111827;
 }
 
@@ -28,173 +28,166 @@ header p{
     opacity:0.7;
 }
 
-/* BENTO GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+/* CONTENEDOR */
+.container{
+    max-width:1100px;
+    margin:auto;
     padding:30px;
 }
 
-.card{
+/* SECCIONES */
+.section{
     background:#1f2937;
-    border-radius:16px;
-    overflow:hidden;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
     box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    transition:0.3s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
+.section h2{
+    margin-top:0;
+    color:#60a5fa;
 }
 
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:15px;
-}
-
-.card h3{
-    margin:0 0 10px 0;
-}
-
-.card p{
+.section p, li{
     font-size:14px;
-    opacity:0.8;
+    line-height:1.6;
+    opacity:0.9;
 }
 
+/* BOTONES */
 .btn{
     display:inline-block;
     margin-top:10px;
     padding:10px 12px;
-    background:#3b82f6;
-    color:white;
     border-radius:10px;
     text-decoration:none;
     font-size:14px;
+    color:white;
+    background:#3b82f6;
 }
 
 .btn:hover{
     background:#2563eb;
 }
 
-.btn-zip{
-    display:inline-block;
-    margin-top:8px;
-    padding:10px 12px;
+.btn-green{
     background:#10b981;
-    color:white;
-    border-radius:10px;
-    text-decoration:none;
-    font-size:14px;
 }
 
-.btn-zip:hover{
+.btn-green:hover{
     background:#059669;
 }
+
+/* GRID RESULTADOS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:15px;
+}
+
+.card{
+    background:#111827;
+    padding:15px;
+    border-radius:12px;
+}
+
+small{
+    opacity:0.7;
+}
 </style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Panel de Actividades Multimedia</h1>
-    <p>UMSA - Proyecto Individual | Procesamiento de Imágenes + Multimedia</p>
+    <h1>INFORME TÉCNICO BREVE</h1>
+    <p>Procesamiento de Imágenes - Multimedia UMSA</p>
 </header>
 
-<section class="grid">
+<div class="container">
 
-    <!-- 1 TEXTURAS -->
-    <div class="card">
-        <img src="img/texturas.jpg" alt="Clasificación de Texturas">
-        <div class="card-content">
-            <h3>Clasificación de Texturas</h3>
-            <p>Reconocimiento de superficies como césped, tierra y asfalto mediante procesamiento de imagen.</p>
+    <!-- CLASIFICACIÓN TEXTURAS -->
+    <div class="section">
+        <h2>🟢 1. Clasificación de Texturas</h2>
 
-            <a class="btn" href="https://github.com/TU_USUARIO/REPO1" target="_blank">
-                Ver en GitHub
-            </a>
+        <p>
+        Desarrollo de un sistema capaz de diferenciar superficies como césped, tierra, asfalto y cielo
+        mediante técnicas de procesamiento digital de imágenes y clasificación supervisada.
+        </p>
 
-            <a class="btn-zip" href="ClasificadorTexturas.zip" download>
-                Descargar ZIP
-            </a>
+        <p>
+        El sistema utiliza extracción de características (RGB, varianza, desviación estándar) y el algoritmo
+        KNN para clasificar regiones de la imagen.
+        </p>
+
+        <a class="btn" href="ClasificadorTexturas.zip" download>
+            Descargar Proyecto Texturas (.ZIP)
+        </a>
+
+        <a class="btn btn-green" href="https://github.com/Ericka55/proyectomultimedia" target="_blank">
+            Ver en GitHub
+        </a>
+    </div>
+
+    <!-- FILTRO SUAVIZADO -->
+    <div class="section">
+        <h2>🟣 2. Filtro de Suavizado 3×3</h2>
+
+        <p>
+        Implementación de un filtro de promedio que reduce ruido en imágenes utilizando una ventana de 3×3 píxeles.
+        Cada píxel es reemplazado por el promedio de sus vecinos.
+        </p>
+
+        <p>
+        Esta técnica mejora la suavidad de la imagen y reduce variaciones bruscas de color.
+        </p>
+
+        <a class="btn" href="FiltroSuavizado.zip" download>
+            Descargar Filtro Suavizado (.ZIP)
+        </a>
+
+        <a class="btn btn-green" href="https://github.com/Ericka55/proyectomultimedia" target="_blank">
+            Ver en GitHub
+        </a>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="section">
+        <h2>📊 Resultados Obtenidos</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Clasificación de Texturas</h3>
+                <small>Segmentación por colores</small>
+                <p>Identificación de superficies mediante análisis de píxeles y KNN.</p>
+            </div>
+
+            <div class="card">
+                <h3>Filtro de Suavizado</h3>
+                <small>Reducción de ruido</small>
+                <p>Imagen más uniforme y con menos ruido visual tras el promedio 3×3.</p>
+            </div>
+
         </div>
     </div>
 
-    <!-- 2 SUAVIZADO -->
-    <div class="card">
-        <img src="img/suavizado.jpg" alt="Filtro Suavizado">
-        <div class="card-content">
-            <h3>Filtro de Suavizado 3×3</h3>
-            <p>Reducción de ruido en imágenes usando promedio de píxeles.</p>
+    <!-- CONCLUSIONES -->
+    <div class="section">
+        <h2>📌 Conclusiones</h2>
 
-            <a class="btn" href="https://github.com/TU_USUARIO/REPO2" target="_blank">
-                Ver en GitHub
-            </a>
-
-            <a class="btn-zip" href="FiltroSuavizado.zip" download>
-                Descargar ZIP
-            </a>
-        </div>
+        <ul>
+            <li>Se implementaron correctamente dos técnicas de procesamiento de imágenes.</li>
+            <li>El análisis a nivel de píxel permite manipulación directa de la imagen.</li>
+            <li>KNN fue efectivo para clasificación básica de texturas.</li>
+            <li>El filtro 3×3 mejoró la calidad visual reduciendo ruido.</li>
+        </ul>
     </div>
 
-    <!-- 3 VACALOLA -->
-    <div class="card">
-        <img src="img/vacalola.jpg" alt="La Vaca Lola">
-        <div class="card-content">
-            <h3>Cover "La Vaca Lola"</h3>
-            <p>Animación sincronizada con música y personaje digital.</p>
-
-            <a class="btn" href="https://github.com/TU_USUARIO/REPO3" target="_blank">
-                Ver en GitHub
-            </a>
-        </div>
-    </div>
-
-    <!-- 4 TRAMITES BPM -->
-    <div class="card">
-        <img src="img/tramites.jpg" alt="BPM Trámites">
-        <div class="card-content">
-            <h3>Digitalización de Trámites</h3>
-            <p>Sistema BPM con JSON para gestión de procesos universitarios.</p>
-
-            <a class="btn" href="https://github.com/TU_USUARIO/REPO4" target="_blank">
-                Ver en GitHub
-            </a>
-        </div>
-    </div>
-
-    <!-- 5 UNITY -->
-    <div class="card">
-        <img src="img/unity.jpg" alt="Unity WebGL">
-        <div class="card-content">
-            <h3>Animación Unity WebGL</h3>
-            <p>Coreografía sincronizada exportada a navegador.</p>
-
-            <a class="btn" href="https://github.com/TU_USUARIO/REPO5" target="_blank">
-                Ver en GitHub
-            </a>
-        </div>
-    </div>
-
-    <!-- 6 FOTOGRAMETRIA -->
-    <div class="card">
-        <img src="img/fotogrametria.jpg" alt="Fotogrametría">
-        <div class="card-content">
-            <h3>Avatar por Fotogrametría</h3>
-            <p>Modelo 3D realista generado desde fotos reales.</p>
-
-            <a class="btn" href="https://github.com/TU_USUARIO/REPO6" target="_blank">
-                Ver en GitHub
-            </a>
-        </div>
-    </div>
-
-</section>
+</div>
 
 </body>
 </html>
